@@ -23,32 +23,33 @@
                 Board List Page
                 <button id="regBtn" type="button" class="btn btn-xs pull-right">Register New Board</button>
             </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
-            <table  class="table table-striped table-bordered table-hover" >
-                    <thead>
-                        <tr>
-                            <th>#번호</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>작성일</th>
-                            <th>수정일</th>
-                        </tr>
-                    </thead>
-                    <c:forEach items="${ list }" var="board">
-                    	<tr>
-                    		<td><c:out value="${ board.bno }" /></td>
-                    		<td><a href='/board/get?bno=<c:out value="${ board.bno }"/>'>
-                    		<c:out value="${ board.title }" /></a></td>
-                    		<td><c:out value="${ board.writer }" /></td>
-                    		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${ board.regdate }" /></td>
-                    		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${ board.updateDate }" /></td>
-                    	</tr>
-                    </c:forEach>
+	            <!-- /.panel-heading -->
+	        <div class="panel-body">
+	        <table  class="table table-striped table-bordered table-hover" >
+		        <thead>
+		            <tr>
+		                <th>#번호</th>
+		                <th>제목</th>
+		                <th>작성자</th>
+		                <th>작성일</th>
+		                <th>수정일</th>
+		            </tr>
+		        </thead>
+		        <c:forEach items="${ list }" var="board">
+		        	<tr>
+		        		<td><c:out value="${ board.bno }" /></td>
+		        		<td><a href='/board/get?bno=<c:out value="${ board.bno }"/>'>
+		        		<c:out value="${ board.title }" /></a></td>
+		        		<td><c:out value="${ board.writer }" /></td>
+		        		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${ board.regdate }" /></td>
+		        		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${ board.updateDate }" /></td>
+		        	</tr>
+		        </c:forEach>
 			</table>
-		</div>
+			</div>
 		<!-- end panel-body -->	
-   </div>        
+   		</div>        
+	</div>
 </div>
 <!-- /.row -->
 
