@@ -7,8 +7,8 @@
 	</select>
 
 	<insert id="insert">
-		insert into tbl_board (bno, title, content, writer)
-		values (seq_board.nextval, #{title}, #{content}, #{writer} )
+		insert into tbl_board (bno, title, content, writer, regdate)
+		values (seq_board.nextval, #{title}, #{content}, #{writer}, SYSDATE )
 	</insert>
 
 	<insert id="insertSelectKey">
@@ -17,7 +17,7 @@
 		</selectKey>
 		
 		insert into tbl_board (bno, title, content, writer)
-		values (#{bno}, #{title}, #{content}, #{writer} )
+		values (#{bno}, #{title}, #{content}, #{writer})
 	</insert>
 	
 	<select id="read" resultType="org.zerock.domain.BoardVO">

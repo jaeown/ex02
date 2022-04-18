@@ -21,6 +21,8 @@ public class BoardController {
 
 	private BoardService service;
 	
+	
+	// 게시판 목록 목록 
 	@GetMapping("/list")
 	public void list(Model model) {
 		
@@ -29,6 +31,7 @@ public class BoardController {
 		model.addAttribute("list", service.getList());
 	}
 	
+	// 게시물 등록
 	@PostMapping("/register")
 	public String register(BoardVO board, RedirectAttributes rttr) {
 		log.info("register: " + board);
@@ -40,6 +43,7 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
+	// 게시물 수정
 	@PostMapping("/modify")
 	public String modify(BoardVO board, RedirectAttributes rttr) {
 		log.info("modify: " + board);
@@ -50,6 +54,7 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
+	// 게시물 삭제
 	@PostMapping("/remove")
 	public String remove(@RequestParam("bno") Long bno, RedirectAttributes rttr) {
 		log.info("remove...."+ bno);
@@ -58,5 +63,18 @@ public class BoardController {
 			rttr.addFlashAttribute("result", "success");
 		}
 		return "redirect:/board/list";
+	}
+	
+	@GetMapping("/register")
+	public void register() {
+		
+	}
+	
+	// 게시판 상세(분기-수정/삭제)
+	@GetMapping({"/get", "/modify"})
+	public void get(@RequestParam("bno") Long bno, Model model) {
+		
+		log.info("/get or modify");
+		model.addAttribute("board", service.get(bno));
 	}
 }
