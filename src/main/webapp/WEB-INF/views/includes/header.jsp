@@ -4,11 +4,6 @@
 <html>
 <head>
 <title>HEADER</title>
-<!DOCTYPE html>
-<html lang="en">
-
-
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -377,6 +372,7 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
+        </div>
 
         <div id="page-wrapper">
         

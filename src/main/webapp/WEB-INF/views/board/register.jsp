@@ -38,6 +38,7 @@
 						<button type="reset" class="btn btn-default">Reset Button</button>
 					</div>
 				</form>
+						<button data-oper='list' class="btn btn-default" onclick="location.href='/board/list'">List</button>
 			</div>
 			<!-- end panel-body -->
 		
