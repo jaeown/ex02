@@ -38,7 +38,7 @@
 		        	<tr>
 		        		<td><c:out value="${ board.bno }" /></td>
 		        		<td>
-		        			<a class="move" href='/board/get?bno=<c:out value="${ board.bno }"/>'>
+		        			<a class="move" href='<c:out value="${ board.bno }"/>'>
 		        			<c:out value="${ board.title }" /></a>
 		        		</td>
 		        		<td><c:out value="${ board.writer }" /></td>
@@ -140,13 +140,13 @@
 			actionForm.submit();
 		});
 		
-	});
 		$(".move").on("click", function(e){
 			e.preventDefault();
 			actionForm.append("<input type='hidden' name='bno' value='"+$(this).attr("href")+"'>");
 			actionForm.attr("action","/board/get");
 			actionFrom.submit();
 		});
+	});
 	
 
 	
