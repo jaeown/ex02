@@ -23,6 +23,8 @@
 	
 	<context:component-scan base-package="org.zerock.controller" />
 	
-	
+	<!-- 예외처리 -->
+	<context:component-scan base-package="org.zerock.controller"/>
+	<context:component-scan base-package="org.zerock.exception"/>
 	
 </beans:beans>
