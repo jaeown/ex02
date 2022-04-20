@@ -101,7 +101,7 @@ public class BoardMapperTests {
 	public void testSearch() {
 		
 		Criteria cri = new Criteria();
-		cri.setKeyword("새로");
+		cri.setKeyword("시간");
 		cri.setType("TC");
 		
 		List<BoardVO> list = mapper.getListWithPaging(cri);
