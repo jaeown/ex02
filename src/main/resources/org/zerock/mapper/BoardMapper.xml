@@ -32,9 +32,7 @@
 			from tbl_board
 			where 
 		]]>
-		
 		<include refid="criteria"></include>
-		
 		<![CDATA[ 
 			rownum <= #{pageNum} * #{amount}
 			)
